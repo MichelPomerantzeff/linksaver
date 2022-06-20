@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-header-sideBar);
+    box-shadow: var(--shadow);
+}
+
+h1{
+    font-size: 4em;
+    color: rgba(0, 0, 0, 0.815);
+    text-shadow: 3px 2px 3px whitesmoke;
+}
+
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h1{
+        font-size: 2rem;
+    }
+}
