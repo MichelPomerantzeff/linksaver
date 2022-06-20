@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/linksaver/static/css/main.513f0b6d.css",
+    "main.js": "/linksaver/static/js/main.45f72807.js",
+    "static/media/browsingLogo.png": "/linksaver/static/media/browsingLogo.0e0fa9bfd26c6bbb45e4.png",
+    "index.html": "/linksaver/index.html",
+    "main.513f0b6d.css.map": "/linksaver/static/css/main.513f0b6d.css.map",
+    "main.45f72807.js.map": "/linksaver/static/js/main.45f72807.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.513f0b6d.css",
+    "static/js/main.45f72807.js"
+  ]
+}
