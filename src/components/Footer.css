@@ -1,0 +1,15 @@
+.footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bodyColor);
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.fa-heart {
+    color: red;
+    margin: 10px;
+}

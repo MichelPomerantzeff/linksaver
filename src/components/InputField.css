@@ -1,0 +1,84 @@
+.inputField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 60px;
+    background-color: var(--bodyColor);
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px grey;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 100px;
+}
+
+
+.inputRow > h3{
+    margin: 20px 0 5px 15px;
+}
+
+.singleInput{
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.singleInput > input:focus {
+    box-shadow: 0 0 4px 2px var(--standOutColor);
+}
+
+.singleInput > h3 {
+    padding: 10px;
+    width: 80%;
+    margin: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.save{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #2ECC40;
+}
+
+.save:hover{
+    background-color: #1aa02a;
+    
+}
+.save:active{
+    background-color: #2ECC40;
+    box-shadow: 0 0 0 2px #40e954;
+}
+
+.cancel{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #0059ff;
+}
+.cancel:hover{
+    background-color: #0451df;
+    
+}
+.cancel:active{
+    background-color: #0059ff;
+    box-shadow: 0 0 0 2px #5ea9f0;
+}

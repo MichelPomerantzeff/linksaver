@@ -1,0 +1,12 @@
+.logo {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--standOutColor);
+}
+
+.logoImg {
+    width: 30%;
+    
+}
