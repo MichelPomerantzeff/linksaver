@@ -12,8 +12,8 @@ export function InputField(props) {
                     </div>
 
                     <div className="inputRow" >
-                        <h3>Store:</h3>
-                        <input className="singleInput" onChange={props.handleStore} type="text" placeholder="Store" value={props.store} />
+                        <h3>Shop:</h3>
+                        <input className="singleInput" onChange={props.handleStore} type="text" placeholder="Shop" value={props.store} />
                     </div>
 
                     <div className="inputRow" >
