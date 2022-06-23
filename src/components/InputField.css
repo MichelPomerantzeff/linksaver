@@ -30,14 +30,8 @@
     outline: none;
 }
 
-.singleInput > input:focus {
+.inputRow > input:focus {
     box-shadow: 0 0 4px 2px var(--standOutColor);
-}
-
-.singleInput > h3 {
-    padding: 10px;
-    width: 80%;
-    margin: 5px;
 }
 
 .buttons{

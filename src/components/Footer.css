@@ -7,6 +7,8 @@
     letter-spacing: 2px;
     word-spacing: 5px;
     font-size: 1.2rem;
+    color: white;
+    text-shadow: 2px 2px 5px var(--standOutColor);
 }
 
 .fa-heart {

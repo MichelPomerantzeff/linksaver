@@ -6,8 +6,7 @@
 .app {
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 12% 10% 75% 8%;
-    height: 100vh;
+    grid-template-rows: 12% 10% 75% 15%;
     grid-template-areas:
         "logo header"
         "logo inputField"
@@ -56,15 +55,52 @@
 }
 
 @media (max-width: 1100px) {
- 
+
     .inputs {
         margin: 0;
     }
+
+
+    .filters>input {
+        font-size: .7rem;
+        display: flex;
+        width: 100%;
+        margin: 10px 20px;
+
+    }
+
+    .byPrice {
+        font-size: .5rem;
+
+        width: 100%;
+        margin: 10px 20px;
+
+    }
+
+
 }
 
+
+
+
 @media (max-width: 500px) {
- 
-    .app{
+
+    .app {
         font-size: .7rem;
+    }
+
+    .filters>input {
+        font-size: .6rem;
+        width: 40px;
+        margin: 2px;
+    }
+
+    .byPrice {
+        margin: 2px;
+        width: 70px;
+    }
+
+    .footer {
+        font-size: .8rem;
     }
 }
