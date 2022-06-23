@@ -63,7 +63,7 @@ export function Sidebar(props) {
 
             </div>
 
-            <div>
+            <div className="renderedElements">
 
                 {/* If there is data on localStorage, render product rows, else message "Nothing here" */}
                 {
@@ -75,7 +75,7 @@ export function Sidebar(props) {
                             if (content.product.toLowerCase().includes(productFilter.toLowerCase()) && content.store.toLowerCase().includes(storeFilter.toLowerCase())) {
 
                                 return (
-                                    <div key={content.id} className="renderedElement">
+                                    <div key={content.id} className="renderedRow">
 
                                         <div className="product"><strong>{content.product}</strong></div>
                                         <div className="store"><a href={`${content.link}`}>{content.store}</a></div>
@@ -93,7 +93,7 @@ export function Sidebar(props) {
                         }).reverse()
                         :
                         <div className="emptySidebar">
-                            <h1>This field is empty !!!</h1>
+                            <h1>This field is empty!!!</h1>
                         </div>
                 }
 

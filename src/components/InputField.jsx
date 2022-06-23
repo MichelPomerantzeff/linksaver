@@ -18,7 +18,7 @@ export function InputField(props) {
 
                     <div className="inputRow" >
                         <h3>Price:</h3>
-                        <input className="singleInput" onChange={props.handlePrice} type="text" placeholder="Price" value={props.price} />
+                        <input className="singleInput" onChange={props.handlePrice} placeholder="Price" value={props.price} />
                     </div>
 
                     <div className="inputRow" >

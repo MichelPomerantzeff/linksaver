@@ -30,7 +30,13 @@ export function LinkSaver() {
     function handleProduct(e) { setProduct(e.target.value) }
     function handleStore(e) { setStore(e.target.value) }
     function handlePrice(e) { setPrice(e.target.value) }
-    function handleLink(e) { setLink(e.target.value) }
+    
+    function handleLink(e) { 
+
+        const url = e.target.value.includes("http://") ? e.target.value : `http://${e.target.value}`
+
+        setLink(url) 
+    }
 
 
     // Save data to localStorage everytime data is updated
