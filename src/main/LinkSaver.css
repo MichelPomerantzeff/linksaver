@@ -4,9 +4,11 @@
 }
 
 .app {
+    
     display: grid;
+    height: 100vh;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 12% 10% 75% 15%;
+    grid-template-rows: 15vh 10vh 65vh 1fr;
     grid-template-areas:
         "logo header"
         "logo inputField"
@@ -69,6 +71,9 @@
         height: 35px;
         margin: 2px auto;
     }
+    .inputRow > label{
+        font-size: 1.6rem;
+    }
 }
 
 
@@ -110,6 +115,11 @@
         width: 100%;
         margin: 10px 20px;
     }
+
+    .inputRow > label{
+        font-size: 1.4rem;
+    }
+
 }
 
 
@@ -162,6 +172,13 @@
         height: 200px;
         font-size: 1.4rem;
     }
+
+
+    .inputRow > label{
+        font-size: 1.8rem;
+    }
+
+
 }
 
 
@@ -204,6 +221,10 @@
         height: 150px;
     }
 
+    .inputRow > label{
+        font-size: 1.5rem;
+    }
+
     .footer {
         font-size: 1rem;
     }
@@ -238,6 +259,10 @@
         width: 75px;
     }
 
+    .inputRow > label{
+        font-size: 1.2rem;
+    }
+
     .product{
         width: 100%;
     }
@@ -269,6 +294,11 @@
 }
 
 @media (max-width: 350px) {
+
+    .inputRow > label{
+        font-size: 1rem;
+    }
+
     .inputField{
         font-size: .5rem;
     }

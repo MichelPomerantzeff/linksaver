@@ -78,48 +78,65 @@
 }
 
 .fa-pencil {
-    background-color: #ffd000;
-    padding: 10px;
-    border-radius: 5px;
     border: none;
     width: 40px;
     height: 40px;
     margin-left: 5px;
+    box-shadow: rgba(66, 64, 35, 0.4) 0 1px 2px, rgba(66, 66, 35, 0.3) 0 1px 3px -2px, rgba(107, 111, 58, 0.5) 0 -2px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #ecfa2c 0, #ffc400 100%);
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+    height: 40px;
+    transition: box-shadow .15s, transform .15s;
+}
+
+.fa-pencil:focus {
+    box-shadow: #aeb123 0 0 0 1.5px inset, rgba(175, 164, 65, 0.4) 0 2px 4px, rgba(158, 154, 95, 0.3) 0 7px 13px -3px, #98a023 0 -3px 0 inset;
 }
 
 .fa-pencil:hover {
-    background-color: #e4bb07;
-
+    box-shadow: rgba(66, 66, 35, 0.4) 0 4px 8px, rgba(66, 66, 35, 0.3) 0 7px 13px -3px, rgb(221, 224, 60)0 0 -4px 0 inset;
+    transform: translateY(-2px);
 }
 
 .fa-pencil:active {
-    background-color: #ffd000;
-    box-shadow: 0 0 0 2px #fae140;
-
-
+    box-shadow: #ffd000 0 3px 7px inset;
+    transform: translateY(2px);
 }
 
+
+
 .fa-trash {
-    background-color: #FF4136;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
     border: none;
     width: 40px;
     height: 40px;
     margin-left: 5px;
+    box-shadow: rgba(66, 35, 35, 0.4) 0 1px 2px, rgba(66, 35, 35, 0.3) 0 1px 3px -2px, rgba(111, 58, 58, 0.5) 0 -2px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #fa2c2c 0, #ff0000 100%);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    transition: box-shadow .15s, transform .15s;
+}
 
+.fa-trash:focus {
+    box-shadow: #b12323 0 0 0 1.5px inset, rgba(175, 65, 65, 0.4) 0 2px 4px, rgba(158, 95, 95, 0.3) 0 7px 13px -3px, #a02323 0 -3px 0 inset;
 }
 
 .fa-trash:hover {
-    background-color: #e6291f;
-
+    box-shadow: rgba(66, 35, 35, 0.4) 0 4px 8px, rgba(66, 35, 35, 0.3) 0 7px 13px -3px, rgb(224, 60, 60)0 0 -4px 0 inset;
+    transform: translateY(-2px);
 }
 
 .fa-trash:active {
-    background-color: #FF4136;
-    box-shadow: 0 0 0 2px #fd574e;
+    box-shadow: #ff0000 0 3px 7px inset;
+    transform: translateY(2px);
 }
+
+
+
 
 .emptySidebar {
     display: flex;

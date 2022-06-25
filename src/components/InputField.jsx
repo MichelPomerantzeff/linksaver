@@ -7,22 +7,22 @@ export function InputField(props) {
 
                 <div className="inputs">
                     <div className="inputRow" >
-                        <h3>Product:</h3>
+                        <label>Product:</label>
                         <input className="singleInput" onChange={props.handleProduct} type="text" placeholder="Product" value={props.product} />
                     </div>
 
                     <div className="inputRow" >
-                        <h3>Shop:</h3>
-                        <input className="singleInput" onChange={props.handleStore} type="text" placeholder="Shop" value={props.store} />
+                        <label>Store:</label>
+                        <input className="singleInput" onChange={props.handleStore} type="text" placeholder="Store" value={props.store} />
                     </div>
 
                     <div className="inputRow" >
-                        <h3>Price:</h3>
-                        <input className="singleInput" onChange={props.handlePrice} placeholder="Price" value={props.price} />
+                        <label>Price:</label>
+                        <input className="singleInput" onChange={props.handlePrice} type="number" placeholder="Price" value={props.price} />
                     </div>
 
                     <div className="inputRow" >
-                        <h3>Link:</h3>
+                        <label>Link:</label>
                         <input className="singleInput" onChange={props.handleLink} type="text" placeholder="Link" value={props.link} />
                     </div>
                 </div>

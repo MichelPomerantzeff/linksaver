@@ -77,9 +77,9 @@ export function LinkSaver() {
 
             newData.push({
                  id: generateID(),
-                 product: product === "" ? "Product" : product,
-                 store: store === "" ? "Shop" : store,
-                 price: price === "" ? 0 : price,
+                 product: product === "" ? "Product Sample" : product,
+                 store: store === "" ? "Store Sample" : store,
+                 price: price === "" ? "999.99" : price,
                  link 
                 })
         }
