@@ -1,6 +1,7 @@
 .sidebar {
     padding: 10px;
     background-color: var(--bodyColor);
+    overflow: auto;
 }
 
 .filters {

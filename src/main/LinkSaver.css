@@ -1,10 +1,27 @@
+@media (prefers-reduced-motion: no-preference) {
+    .logoImg {
+        animation: logo-spin infinite 10s linear;
+    }
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 :root {
     --standOutColor: #FDAC53;
     --bodyColor: #d8d8d8;
 }
 
 .app {
-    
+
     display: grid;
     height: 100vh;
     grid-template-columns: 40% 60%;
@@ -71,7 +88,8 @@
         height: 35px;
         margin: 2px auto;
     }
-    .inputRow > label{
+
+    .inputRow>label {
         font-size: 1.6rem;
     }
 }
@@ -116,7 +134,7 @@
         margin: 10px 20px;
     }
 
-    .inputRow > label{
+    .inputRow>label {
         font-size: 1.4rem;
     }
 
@@ -125,13 +143,15 @@
 
 @media (max-width: 1000px) {
     .app {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .logo {
-        display: none;
-    }
+    height: 175vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100px 700px 40% 60px;
+    grid-template-areas:
+        "logo header"
+        "inputField inputField"
+        "sidebar sidebar"
+        "footer footer";
+}
 
     .sidebar {
         margin: 60px;
@@ -169,15 +189,20 @@
         margin: 50px auto;
         padding: 0;
         width: 90%;
-        height: 200px;
+        height: 250px;
         font-size: 1.4rem;
     }
 
 
-    .inputRow > label{
+    .inputRow>label {
         font-size: 1.8rem;
     }
 
+    .footer{
+        position: absolute;
+        top: 170vh;
+        width: 98%;
+    }
 
 }
 
@@ -217,11 +242,12 @@
     }
 
     .emptySidebar {
-        font-size: .8rem;
-        height: 150px;
+        font-size: 1.1rem;
+        height: 200px;
+        margin: 75px auto;
     }
 
-    .inputRow > label{
+    .inputRow>label {
         font-size: 1.5rem;
     }
 
@@ -235,15 +261,15 @@
 
 @media (max-width: 500px) {
 
-    .inputField{
+    .inputField {
         font-size: .7rem;
     }
 
-    .singleInput{
+    .singleInput {
         padding: 10px;
     }
 
-    .filters{
+    .filters {
         flex-direction: column;
         margin: auto;
         width: 70%;
@@ -259,23 +285,23 @@
         width: 75px;
     }
 
-    .inputRow > label{
+    .inputRow>label {
         font-size: 1.2rem;
     }
 
-    .product{
+    .product {
         width: 100%;
     }
 
-    .store{
+    .store {
         width: 100%;
     }
 
-    .price{
+    .price {
         width: 100%;
     }
 
-    .sidebarButtons{
+    .sidebarButtons {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -287,7 +313,7 @@
 
     }
 
-    .footer{
+    .footer {
         font-size: .7rem;
     }
 
@@ -295,36 +321,36 @@
 
 @media (max-width: 350px) {
 
-    .inputRow > label{
+    .inputRow>label {
         font-size: 1rem;
     }
 
-    .inputField{
+    .inputField {
         font-size: .5rem;
     }
 
-    .singleInput{
+    .singleInput {
         font-size: .6rem;
         padding: 5px;
         border-radius: 5px;
     }
 
-    .buttons > button {
+    .buttons>button {
         font-size: .7rem;
         padding: 5px;
         margin: 5px;
     }
 
-    .renderedElements{
+    .renderedElements {
         font-size: .5rem;
     }
 
-    .emptySidebar{
+    .emptySidebar {
         font-size: .3rem;
         height: 60px;
     }
 
-    .footer{
+    .footer {
         font-size: .5rem;
     }
 }
