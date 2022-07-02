@@ -59,6 +59,12 @@
 
 
 @media (max-width: 1600px) {
+
+    .logoImg {
+        width: 230px;
+        padding: 10px 6px 0 0;
+    }
+
     .emptySidebar {
         font-size: 1rem;
         height: 200px;
@@ -96,6 +102,11 @@
 
 
 @media (max-width: 1300px) {
+
+    .logoImg {
+        width: 200px;
+        padding: 10px 6px 0 0;
+    }
 
     .renderedElements {
         font-size: .7rem;
@@ -142,16 +153,26 @@
 
 
 @media (max-width: 1000px) {
+
+    .logoImg {
+        width: 120px;
+        padding: 5px 3px 0 0;
+    }
+
     .app {
-    height: 175vh;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 100px 700px 40% 60px;
-    grid-template-areas:
-        "logo header"
-        "inputField inputField"
-        "sidebar sidebar"
-        "footer footer";
-}
+        height: 175vh;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 100px 700px 40% 60px;
+        grid-template-areas:
+            "logo header"
+            "inputField inputField"
+            "sidebar sidebar"
+            "footer footer";
+    }
+
+    .inputRow>label {
+        font-size: 1.2rem;
+    }
 
     .sidebar {
         margin: 60px;
@@ -193,12 +214,7 @@
         font-size: 1.4rem;
     }
 
-
-    .inputRow>label {
-        font-size: 1.8rem;
-    }
-
-    .footer{
+    .footer {
         position: absolute;
         top: 170vh;
         width: 98%;
@@ -247,9 +263,6 @@
         margin: 75px auto;
     }
 
-    .inputRow>label {
-        font-size: 1.5rem;
-    }
 
     .footer {
         font-size: 1rem;
@@ -260,6 +273,14 @@
 
 
 @media (max-width: 500px) {
+
+    .logoImg {
+        width: 100px;
+    }
+
+    .header{
+        font-size: 1rem;
+    }
 
     .inputField {
         font-size: .7rem;
@@ -283,10 +304,6 @@
     .sidebarButtons {
         flex-direction: row;
         width: 75px;
-    }
-
-    .inputRow>label {
-        font-size: 1.2rem;
     }
 
     .product {
