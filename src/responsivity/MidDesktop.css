@@ -1,0 +1,30 @@
+@media (max-width: 1500px) {
+
+    /* FORM STARTS HERE */
+    .inputRow{
+        font-size: 1.2rem;
+    }
+    
+    .inputRow input{
+        padding: 10px;
+    }
+    /* FORM ENDS HERE */
+    
+
+
+    /* PRODUCTS STARTS HERE */
+
+    .filters *{
+        font-size: .9rem;
+    }
+
+    .filters input{
+        padding: 7px 15px;
+        min-width: 200px;
+    }
+    
+    .filters :nth-child(3) {
+        min-width: 120px;
+    }
+    /* PRODUCTS ENDS HERE */
+}

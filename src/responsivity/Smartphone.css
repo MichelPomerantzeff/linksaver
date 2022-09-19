@@ -1,0 +1,66 @@
+@media (max-width: 380px) {
+
+    /* FORM STARTS HERE */
+
+    form h2{
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+
+    .inputRow {
+        font-size: 1rem;
+    }
+
+    .inputRow input {
+        padding: 7px;
+        font-size: .8rem;
+    }
+
+    .buttons{
+        margin: 10px;
+    }
+    
+    .save, .cancel {
+        font-size: .9rem;
+        padding: 5px 10px;
+        margin: auto 10px;
+    }
+
+    /* FORM ENDS HERE */
+
+
+    /* PRODUCTS STARTS HERE */
+
+    .wrapper h1 {
+        font-size: 1.4rem;
+        height: 40px;
+    }
+
+    .filters{
+        width: 90%;
+        border-radius: 5px;
+        margin: 0 auto 10px auto;
+        padding: 5px;
+    }
+
+    .filters input{
+        padding: 5px 15px;
+        width: 100%;
+    }
+
+    .filters :nth-child(3) {
+        justify-content: center;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .card{
+        flex-direction: column;
+        min-width: 100px;
+        width: 47%;
+    }
+
+    /* PRODUCTS ENDS HERE */
+    
+
+}

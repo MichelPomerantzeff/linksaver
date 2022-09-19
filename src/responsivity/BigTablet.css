@@ -1,0 +1,32 @@
+@media (max-width: 900px) {
+
+    .center {
+        max-height: 100%;
+        flex-direction: column;
+    }
+
+    /* FORM STARTS HERE */
+    .formContainer {
+        justify-content: center;
+        margin: 20px 0;
+    }
+    /* FORM ENDS HERE */
+
+    
+    /* PRODUCTS STARTS HERE */
+    .wrapper{
+        margin-bottom: 20px;
+    }
+
+    .filters input{
+        padding: 7px 15px;
+        min-width: 170px;
+    }
+    
+    .filters :nth-child(3) {
+        min-width: 120px;
+    }
+
+    /* PRODUCTS ENDS HERE */
+
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../public/fonts/OpenSans.ttf");
+}
+
+* {
+    font-family: 'OpenSans';
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-light-color: #cdd5f3;
+    --primary-light-color: #EDF1FF;
+    --secundary-light-color: #ddb6f0;
+    --text-light-color: white;
+    --dark-shadow: 0 0 5px 0 var(--main-light-color);
+
+    --main-dark-color: #18214b;
+    --primary-dark-color: #7e8fb4;
+    --secundary-dark-color: #18214b;
+    --text-dark-color: black;
+    --dark-shadow: 0 0 5px 0 var(--main-dark-color);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.header {
+    box-shadow: var(--dark-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-light-color);
+    height: 80px;
+    gap: 20px;
+}
+
+.header :nth-child(1){
+    font-size: 2rem;
+}
+
+.center {
+    max-height:85vh ;
+    display: flex;
+    flex: 1;
+}
+
+
+.footer {
+    background-color: var(--main-light-color);
+    box-shadow: var(--dark-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.fa-heart {
+    color: red;
+    margin: 10px;
+}

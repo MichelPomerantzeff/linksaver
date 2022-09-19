@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.fa-heart {
+    color: red;
+    margin: 10px;
+}

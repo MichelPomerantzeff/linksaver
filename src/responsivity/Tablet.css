@@ -1,0 +1,64 @@
+@media (max-width: 600px) {
+
+    /* FORM STARTS HERE */
+    .inputRow {
+        font-size: 1.2rem;
+    }
+
+    .inputRow input {
+        padding: 10px;
+    }
+
+    /* FORM ENDS HERE */
+
+
+
+    /* PRODUCTS STARTS HERE */
+
+    .filters input{
+        padding: 5px 15px;
+        min-width: 140px;
+        width: 45%;
+        margin: 5px 0;
+    }
+
+    .filters :nth-child(3) {
+        justify-content: center;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        flex-direction: column;
+        min-width: 120px;
+        width: 47%;
+    }
+
+    .product, .store, .price{
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cardButtons button {
+        font-size: .8rem;
+    }
+
+    .fa-pencil,
+    .fa-trash {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* PRODUCTS ENDS HERE */
+
+    .footer{
+        font-size: .8rem;
+    }
+
+}

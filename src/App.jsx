@@ -1,22 +1,20 @@
-import { Logo } from "../components/Logo"
-import { Header } from "../components/Header"
-import { Sidebar } from "../components/Sidebar"
-import { InputField } from "../components/InputField"
-import { Footer } from "../components/Footer"
+import Products from "./components/Products"
+import Form from "./components/Form"
 import { useState, useEffect } from "react"
+import "./App.css"
+import "./responsivity/MidDesktop.css"
+import "./responsivity/Laptop.css"
+import "./responsivity/BigTablet.css"
+import "./responsivity/Tablet.css"
+import "./responsivity/Smartphone.css"
 
-
-import "./LinkSaver.css"
-
-export function LinkSaver() {
+function App() {
 
     const [product, setProduct] = useState("")
     const [store, setStore] = useState("")
     const [price, setPrice] = useState("")
     const [link, setLink] = useState("")
     const [id, setId] = useState("")
-
-    // If localStorage not empty, set its value to data state on first render, else set data state to "[]"
     const [data, setData] = useState(() => JSON.parse(localStorage.getItem("data")) || [])
 
     // Get input value from inputField
@@ -85,26 +83,38 @@ export function LinkSaver() {
 
     return (
         <div className="app">
-            <Logo />
-            <Header />
-            <InputField
-                handleProduct={handleProduct}
-                handleStore={handleStore}
-                handlePrice={handlePrice}
-                handleLink={handleLink}
-                cancel={cancel}
-                save={save}
-                product={product}
-                store={store}
-                price={price}
-                link={link}
-            />
-            <Sidebar
-                inputData={data}
-                dataLength={data.length}
-                edit={incomingValues}
-            />
-            <Footer />
+            
+            <div className="header">
+                <i className="fa fa-link"/>
+                <h1>Link Saver</h1>
+            </div>
+
+            <div className="center">
+                <Form
+                    handleProduct={handleProduct}
+                    handleStore={handleStore}
+                    handlePrice={handlePrice}
+                    handleLink={handleLink}
+                    cancel={cancel}
+                    save={save}
+                    product={product}
+                    store={store}
+                    price={price}
+                    link={link}
+                />
+                <Products
+                    data={data}
+                    dataLength={data.length}
+                    edit={incomingValues}
+                />
+            </div>
+
+            <div className="footer">
+                <p>Developed with<i className="fa fa-heart" aria-hidden="true"></i>by <strong>Michel Pomeranzteff</strong></p>
+            </div>
+
         </div>
     )
 }
+
+export default App;

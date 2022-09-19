@@ -1,9 +1,0 @@
-.header {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--standOutColor);
-    font-size: 1.7rem;
-
-}

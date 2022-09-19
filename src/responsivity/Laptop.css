@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+
+    /* FORM STARTS HERE */
+
+    .formContainer {
+        flex: 1.5;
+    }
+
+    .inputRow {
+        font-size: 1rem;
+    }
+
+    .inputRow input {
+        padding: 8px;
+    }
+
+    /* FORM ENDS HERE */
+
+
+
+    /* PRODUCTS STARTS HERE */
+
+    .filters input {
+        padding: 5px 15px;
+        min-width: 100px;
+    }
+
+    .filters :nth-child(3) {
+        min-width: 110px;
+    }
+
+    .cardButtons button {
+        font-size: 1.1rem;
+    }
+
+    .fa-pencil,
+    .fa-trash {
+        width: 35px;
+        height: 35px;
+    }
+
+    .product {
+        flex: 2;
+    }
+
+    /* PRODUCTS ENDS HERE */
+
+
+}
