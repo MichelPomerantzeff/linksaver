@@ -55,7 +55,7 @@ function Products(props) {
         <div className="productsContainer">
             <div className="wrapper">
 
-                <h1>List of Products</h1>
+                <h1 className="products-title">List of Products</h1>
 
                 <div className="filters">
                     <input onChange={handleProductFilter} type="text" placeholder="Product" />

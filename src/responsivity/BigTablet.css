@@ -18,6 +18,10 @@
         margin-bottom: 20px;
     }
 
+    .products-title{
+        height: 50px;
+    }
+
     .filters input{
         padding: 7px 15px;
         min-width: 170px;

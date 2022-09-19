@@ -15,6 +15,10 @@
 
     /* PRODUCTS STARTS HERE */
 
+    .products-title{
+        height: 40px;
+    }
+
     .filters input{
         padding: 5px 15px;
         min-width: 140px;
@@ -54,6 +58,13 @@
         width: 30px;
         height: 30px;
     }
+
+    .emptySidebar {
+        letter-spacing: .5px;
+        word-spacing: 1px;
+        padding: 30px 10px;
+        font-size: .7rem;
+    } 
 
     /* PRODUCTS ENDS HERE */
 
