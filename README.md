@@ -2,7 +2,7 @@
 
 [>>> View Live Demo <<<](https://michelpomerantzeff.github.io/linksaver-with-localStorage/)
 
-![ls](https://user-images.githubusercontent.com/96065240/175559067-faa8d2bd-9caa-43f2-a827-114c3ebc9eab.png)
+![linksaver](https://user-images.githubusercontent.com/96065240/191347036-0d585532-fa70-4514-9f1d-5f1467de42f8.PNG)
 
 
 # Getting Started with Create React App
