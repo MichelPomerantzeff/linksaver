@@ -140,12 +140,6 @@
     transition: all .2s;
 }
 
-.card:hover {
-    box-shadow: 0 0 4px 0 gray;
-    transform: translateY(-2px);
-    transition: all .2s;
-}
-
 .product{
     flex: 3;
     display: flex;
@@ -162,6 +156,10 @@
 .store a{
     text-decoration: none;
     color: blue;
+}
+
+.store a:hover{
+    text-decoration: underline;
 }
 
 .price{
