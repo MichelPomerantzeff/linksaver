@@ -6,10 +6,6 @@
         flex: 1.5;
     }
 
-    .inputRow {
-        font-size: 1rem;
-    }
-
     .inputRow input {
         padding: 8px;
     }

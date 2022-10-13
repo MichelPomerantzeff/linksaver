@@ -13,7 +13,7 @@ form{
     flex-direction: column;
     height: 90%;
     width: 95%;
-    border-radius: 10px;    
+    border-radius: 5px;    
 }
 
 form h2{
@@ -58,7 +58,7 @@ form h2{
     border: solid 1px lightgray;
     outline: none;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .inputRow input:focus{

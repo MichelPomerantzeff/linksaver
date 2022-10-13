@@ -47,7 +47,10 @@ function App() {
     const generateID = () => Math.round(Math.random() * 10000)
 
     // Save input values to localStorage
-    function save() {
+    function save(e) {
+
+        e.preventDefault()
+
         let dataArray = localStorage.getItem("data")
         let newData = []
 

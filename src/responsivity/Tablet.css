@@ -1,9 +1,7 @@
 @media (max-width: 600px) {
 
     /* FORM STARTS HERE */
-    .inputRow {
-        font-size: 1.2rem;
-    }
+
 
     .inputRow input {
         padding: 10px;
