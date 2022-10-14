@@ -84,7 +84,7 @@ function Products(props) {
 
                                             <div key={card.id} className="card">
                                                 <div className="product">{card.product}</div>
-                                                <div className="store"><a href={`${card.link}`} target="_blank" >{card.store}</a></div>
+                                                <div className="store"><a href={`${card.link}`} target="_blank" rel="noopener noreferrer">{card.store}</a></div>
                                                 <div className="price">€ {card.price}</div>
                                                 <div className="cardButtons">
                                                     <button onClick={() => handleEdit(card.id)} className="fa fa-pencil" aria-hidden="true" ></button>
