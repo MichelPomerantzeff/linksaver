@@ -31,7 +31,7 @@ npm install
 npm start
 ```
 
-##### To see a live demo of this project, click [here](https://michelpomerantzeff.github.io/linksaver-with-localStorage)
+##### To see a live demo of this project, click [here](https://michelpomerantzeff.github.io/linksaver)
 
 ### Author
 - Michel Pomerantzeff
