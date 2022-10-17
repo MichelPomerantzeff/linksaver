@@ -13,8 +13,7 @@ After products have been added to a list, the users can search for specific prod
 - Local Storage
 
 ## Future implementations:
-- Alarm function
-
+-  Notification of price change and product availability
 
 ## How to use?
 Download this repository
