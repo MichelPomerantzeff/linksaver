@@ -4,13 +4,13 @@
 
 
 ## 💻 Project
-A real time clock that includes the following functions:
-- Clock
-- Stopwatch
-- Countdown
 
-## 🚀 Stack Used:
+This Link Saver makes it easier for users to save information of online products such as name, price and link in an organized way.
+After products have been added to a list, the users can search for specific products on the list or even organize them by price with the help filter options. 
+
+## 🚀 Stack & Tools Used:
 - React.js
+- Local Storage
 
 ## Future implementations:
 - Alarm function
