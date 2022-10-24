@@ -113,7 +113,7 @@ function App() {
             </div>
 
             <div className="footer">
-                <p>Developed with<i className="fa fa-heart" aria-hidden="true"></i>by <strong>Michel Pomeranzteff</strong></p>
+                <p>&copy; 2022. Built by Michel Pomerantzeff</p>
             </div>
 
         </div>
