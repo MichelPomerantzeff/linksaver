@@ -1,11 +1,59 @@
+import { useState, useEffect } from "react";
 import "../css/Form.css"
+import axios from "axios";
 
-function Form(props) {
+function Form({ productToUpdate  }) {
+
+    const [id, setId] = useState(productToUpdate)
+
+    const productInitialState = {
+        productName: "",
+        shop: "",
+        price: '',
+        link: ""
+    };
+
+    const [product, setProduct] = useState(productInitialState);
+
+    const {productName, shop, price, link} = product;
+
+    const onInputChange = e => {
+        setProduct({ ...product, [e.target.name]: e.target.value});
+    };
+
+    useEffect(() => {
+        if(id > 0){
+            loadProductById();
+        }
+        setId(productToUpdate)
+        setProduct({...productToUpdate})
+    }, [productToUpdate])
+
+    const loadProductById = async () => {
+        const result = await axios.get(`http://localhost:8080/product/${id}`)
+        setProduct(result.data)
+        console.log(result.data)
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        if (id > 0){
+            await axios.put(`http://localhost:8080/product/${id}`, product);
+        } else {
+            await axios.post("http://localhost:8080/product", product);
+        }
+        resetForm();
+    };
+    
+    const resetForm = () => {
+        setProduct(productInitialState);
+        setId(0);
+    };
 
     return (
         <div className="formContainer">
 
-            <form action="">
+            <form onSubmit={(e) => onSubmit(e)}>
 
                 <h2>Product information</h2>
 
@@ -14,28 +62,55 @@ function Form(props) {
                     <div className="inputs-wrapper">
                         <div className="inputRow" >
                             <label>Product:</label>
-                            <input className="singleInput" onChange={props.handleProduct} type="text" placeholder="Enter product name/descrition" value={props.product} />
+                            <input 
+                                className="singleInput" 
+                                type="text" 
+                                placeholder="Enter product name/descrition" 
+                                name="productName" 
+                                value={productName || ''}
+                                onChange={(e) => onInputChange(e)}
+                            />
                         </div>
 
                         <div className="inputRow" >
                             <label>Store:</label>
-                            <input className="singleInput" onChange={props.handleStore} type="text" placeholder="Enter store" value={props.store} />
+                            <input 
+                                className="singleInput" 
+                                type="text" 
+                                placeholder="Enter store" 
+                                name="shop" 
+                                value={shop || ''}
+                                onChange={(e) => onInputChange(e)}
+                            />
                         </div>
 
                         <div className="inputRow" >
                             <label>Price:</label>
-                            <input className="singleInput" onChange={props.handlePrice} type="number" placeholder="Enter price" value={props.price} />
+                            <input 
+                                className="singleInput" 
+                                type="number" 
+                                placeholder="Enter price" 
+                                name="price" 
+                                value={price || ''}
+                                onChange={(e) => onInputChange(e)}
+                            />
                         </div>
 
                         <div className="inputRow" >
                             <label>Link:</label>
-                            <input className="singleInput" onChange={props.handleLink} type="text" placeholder="Enter link" value={props.link} />
+                            <input 
+                                className="singleInput" 
+                                type="text" 
+                                placeholder="Enter link" 
+                                name="link" 
+                                value={link || ''}
+                                onChange={(e) => onInputChange(e)}
+                            />
                         </div>
                     </div>
-
                     <div className="buttons">
-                        <button onClick={props.save} className="save" type="submit">Save</button>
-                        <button onClick={props.cancel} className="cancel" type="reset">Cancel</button>
+                        <button className="save" type="submit">Save</button>
+                        <button onClick={resetForm} className="cancel" type="reset">Cancel</button>
                     </div>
                 </div>
 

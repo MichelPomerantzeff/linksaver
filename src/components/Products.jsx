@@ -1,22 +1,26 @@
 import { useEffect, useState, useRef } from "react"
 import "../css/Products.css"
+import axios from "axios"
 
-function Products(props) {
+function Products({ onProductUpdate }) {
 
-    const [projectsData, setProjectsData] = useState([])
+    const [productsData, setProductsData] = useState([])
+
     const [productFilter, setProductFilter] = useState('')
     const [storeFilter, setStoreFilter] = useState('')
     const [priceFilter, setPriceFilter] = useState('Price order')
     const [isOpen, setIsOpen] = useState(false)
     let menuRef = useRef()
 
-    localStorage.setItem('data', JSON.stringify(projectsData))
-
-    // Data coming from Parent (Linksaver.jsx) as props to projectsData state
     useEffect(() => {
-        setProjectsData(props.data)
-    }, [props.data])
+        loadProducts();
+    }, [])
 
+    const loadProducts = async () => {
+        const result = await axios.get("http://localhost:8080/products")
+        setProductsData(result.data)
+    }
+    
     // Filter products to be displayed
     function handleProductFilter(e) { setProductFilter(e.target.value) }
     function handleStoreFilter(e) { setStoreFilter(e.target.value) }
@@ -24,24 +28,23 @@ function Products(props) {
     // Sort products by price
     function handlePriceFilter(e) {
         if (e.target.innerText === "High to Low") {
-            projectsData.sort((a, b) => b.price - a.price)
+            productsData.sort((a, b) => b.price - a.price)
             setPriceFilter("High to Low")
         } else {
-            projectsData.sort((a, b) => a.price - b.price)
+            productsData.sort((a, b) => a.price - b.price)
             setPriceFilter('Low to High')
         }
     }
 
-    // Delete item from localStorage based on its ID & update projectsData state 
-    function handleDelete(id) {
-        const deleteItem = projectsData.filter(data => data.id !== id)
-        setProjectsData(deleteItem)
+    // Delete product from database & update list of products
+    const deleteProduct = async (id) => {
+        await axios.delete(`http://localhost:8080/product/${id}`)
+        loadProducts();
     }
 
-    // Return element which edit button was clicked
-    function handleEdit(id) {
-        const editItem = projectsData.filter(data => data.id === id)
-        props.edit(editItem)
+
+    function editProduct(product) {
+        onProductUpdate(product); // Call the function to send the ID to the form
     }
 
     // Hide element if user clicks outside
@@ -54,9 +57,7 @@ function Products(props) {
     return (
         <div className="productsContainer">
             <div className="wrapper">
-
                 <h1 className="products-title">List of Products</h1>
-
                 <div className="filters">
                     <input onChange={handleProductFilter} type="text" placeholder="Product" />
                     <input onChange={handleStoreFilter} type="text" placeholder="Store" />
@@ -74,32 +75,33 @@ function Products(props) {
 
                 <div className="box">
                     {
-                        projectsData.length > 0 ?
-                            <div className="products">
-                                {
-                                    projectsData.filter(card =>
-                                        card.product.toLowerCase().includes(productFilter.toLowerCase()) &&
-                                        card.store.toLowerCase().includes(storeFilter.toLowerCase()))
-                                        .map(card => (
-
-                                            <div key={card.id} className="card">
-                                                <div className="product">{card.product}</div>
-                                                <div className="store"><a href={`${card.link}`} target="_blank" rel="noopener noreferrer">{card.store}</a></div>
-                                                <div className="price">€ {card.price}</div>
-                                                <div className="cardButtons">
-                                                    <button onClick={() => handleEdit(card.id)} className="fa fa-pencil" aria-hidden="true" ></button>
-                                                    <button onClick={() => handleDelete(card.id)} className="fa fa-trash" aria-hidden="true" ></button>
-                                                </div>
-                                            </div>
-                                        ))
-                                }
-                            </div>
-
-                            :
-
-                            <div className="emptySidebar">
-                                <h1>YOUR LIST IS EMPTY!!!</h1>
-                            </div>
+                        productsData.length > 0 
+                        ?
+                        <div className="products">
+                            {
+                                productsData.map(product => (
+                                    <div key={product.id} className="card">
+                                        <div className="product">{product.productName}</div>
+                                        <div className="store">
+                                            <a href={product.link?.includes('https://') ? `${product.link}` : `https://${product.link}`} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer">
+                                                {product.shop}
+                                            </a>
+                                        </div>
+                                        <div className="price">€ {product.price?.toFixed(2)}</div>
+                                        <div className="cardButtons">
+                                            <button onClick={() => editProduct(product)} className="fa fa-pencil" aria-hidden="true"/>
+                                            <button onClick={() => deleteProduct(product.id)} className="fa fa-trash" aria-hidden="true" />
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        :
+                        <div className="emptySidebar">
+                            <h1>YOUR LIST IS EMPTY!!!</h1>
+                        </div>
                     }
                 </div>
 
