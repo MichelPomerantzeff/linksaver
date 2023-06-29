@@ -2,11 +2,11 @@ import Products from "./components/Products"
 import Form from "./components/Form"
 import { useState, useEffect } from "react"
 import "./App.css"
-import "./responsivity/MidDesktop.css"
-import "./responsivity/Laptop.css"
-import "./responsivity/BigTablet.css"
-import "./responsivity/Tablet.css"
-import "./responsivity/Smartphone.css"
+import "./responsiveness/MidDesktop.css"
+import "./responsiveness/Laptop.css"
+import "./responsiveness/BigTablet.css"
+import "./responsiveness/Tablet.css"
+import "./responsiveness/Smartphone.css"
 
 function App() {
 
@@ -113,7 +113,7 @@ function App() {
             </div>
 
             <div className="footer">
-                <p>&copy; 2022. Built by Michel Pomerantzeff</p>
+                <p>&copy; 2022. Built by <strong>Michel Pomerantzeff</strong></p>
             </div>
 
         </div>
