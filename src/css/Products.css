@@ -7,10 +7,9 @@
 }
 
 .wrapper {
-    background-color: var(--main-light-color);
-    box-shadow: var(--dark-shadow);
+    background-color: var(--main_color_light_mode);
+    box-shadow: var(--shadow_light_mode);
     border-radius: 5px;
-    
     height: 90%;
     width: 95%;
     display: flex;
@@ -24,11 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text_color_light_mode);
 }
 
 .filters{
     /* border: solid 1px red; */
-    background: var(--primary-light-color);
+    background: var(--main_bg_light_mode);
     width: 90%;
     border-radius: 5px;
     margin: 10px auto;
@@ -51,6 +51,7 @@
     border-radius: 5px;
     min-width: 250px;
     width: 30%;
+    background: var(--second_bg_light_mode);
 }
 
 .filters :nth-child(3) {
@@ -62,7 +63,7 @@
 }
 
 .filters input:focus{
-    box-shadow: var(--dark-shadow);
+    box-shadow: var(--shadow_light_mode);
 }
 
 
@@ -73,6 +74,7 @@
     padding: 5px;
     cursor: pointer;
     font-weight: bold;
+    color: var(--text_color_light_mode);
 }
 
 .price-filter :nth-child(1){
@@ -86,7 +88,7 @@
 
 .dropdown-menu {
     width: 100%;
-    background-color: var(--main-light-color);
+    background-color: var(--main_color_light_mode);
     border: solid 1px gray;
     border-radius: 3px;
     display: flex;
@@ -102,6 +104,7 @@
     padding: 5px;
     text-align: center;
     font-weight: bold;
+    color: var(--text_color_light_mode);
 }
 
 .dropdown-menu option:hover {
@@ -123,13 +126,12 @@
     overflow-y: auto;
 }
 .products{
-    background: var(--primary-light-color);
+    background: var(--main_bg_light_mode);
     border-radius: 5px;
     padding: 20px;
 }
 
 .card {
-    background: white;
     border: solid 1px lightgray;
     display: flex;
     justify-content: space-between;
@@ -138,6 +140,8 @@
     margin: 10px auto;
     border-radius: 5px;
     transition: all .2s;
+    color: var(--text_color_light_mode);
+    background: var(--second_bg_light_mode);
 }
 
 .product{
@@ -227,7 +231,7 @@
 }
 
 .emptySidebar {
-    background: var(--primary-light-color);
+    background: var(--main_bg_light_mode);
     border: solid 1px lightgray;
     color: rgb(168, 168, 168);
     letter-spacing: 1px;

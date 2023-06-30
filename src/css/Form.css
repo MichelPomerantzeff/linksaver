@@ -7,8 +7,8 @@
 }
 
 form{
-    background-color: var(--main-light-color);
-    box-shadow: var(--dark-shadow);
+    background-color: var(--main_color_light_mode);
+    box-shadow: var(--shadow_light_mode);
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -22,6 +22,7 @@ form h2{
     align-items: center;
     height: 15%;
     width: 100%;
+    color: var(--text_color_light_mode);
 }
 
 .formContent{
@@ -34,10 +35,11 @@ form h2{
 }
 
 .inputs-wrapper{
-    background-color: var(--primary-light-color);
+    background: var(--main_bg_light_mode);
     border-radius: 5px;
     width: 85%;
     padding: 20px;
+    color: var(--text_color_light_mode);
 }
 
 .inputRow{
@@ -45,8 +47,9 @@ form h2{
     width: 95%;
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
-    font-size: 1.5rem;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .inputRow label{
@@ -59,10 +62,11 @@ form h2{
     outline: none;
     font-size: 1rem;
     border-radius: 5px;
+    background: var(--second_bg_light_mode);
 }
 
 .inputRow input:focus{
-    box-shadow: var(--dark-shadow);
+    box-shadow: var(--shadow_light_mode);
 }
 
 .buttons{
