@@ -8,7 +8,7 @@ function Products({ onProductUpdate }) {
     const [productsData, setProductsData] = useState([])
 
     const [productFilter, setProductFilter] = useState('')
-    const [storeFilter, setStoreFilter] = useState('')
+    const [shopFilter, setShopFilter] = useState('')
     const [priceFilter, setPriceFilter] = useState('Price order')
     const [isOpen, setIsOpen] = useState(false)
     let menuRef = useRef()
@@ -24,7 +24,7 @@ function Products({ onProductUpdate }) {
     
     // Filter products to be displayed
     function handleProductFilter(e) { setProductFilter(e.target.value) }
-    function handleStoreFilter(e) { setStoreFilter(e.target.value) }
+    function handleShopFilter(e) { setShopFilter(e.target.value) }
 
     // Sort products by price
     function handlePriceFilter(e) {
@@ -61,7 +61,7 @@ function Products({ onProductUpdate }) {
                 <h1 className="products-title">List of Products</h1>
                 <div className="filters">
                     <input onChange={handleProductFilter} type="text" placeholder="Product" />
-                    <input onChange={handleStoreFilter} type="text" placeholder="Store" />
+                    <input onChange={handleShopFilter} type="text" placeholder="Shop" />
                     <div className="dropdown" onClick={() => setIsOpen(prev => !prev)} ref={menuRef} >
                         <button className="price-filter" >{priceFilter} <i className="fa fa-caret-down" /> </button>
                         {
@@ -81,6 +81,10 @@ function Products({ onProductUpdate }) {
                         <div className="products">
                             {
                                 productsData.map(product => (
+
+                                    product.productName.toLowerCase().includes(productFilter.toLowerCase()) &&
+                                    product.shop.toLowerCase().includes(shopFilter.toLowerCase())) &&
+
                                     <div key={product.id} className="card">
                                         <div className="product">{product.productName}</div>
                                         <div className="store">
@@ -96,7 +100,7 @@ function Products({ onProductUpdate }) {
                                             <button onClick={() => deleteProduct(product.id)} className="fa fa-trash" aria-hidden="true" />
                                         </div>
                                     </div>
-                                ))
+                                )
                             }
                         </div>
                         :
