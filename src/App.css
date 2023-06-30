@@ -10,17 +10,19 @@
 }
 
 :root {
-    --main-light-color: #cdd5f3;
-    --primary-light-color: #EDF1FF;
-    --secundary-light-color: #ddb6f0;
-    --text-light-color: white;
-    --dark-shadow: 0 0 5px 0 var(--main-light-color);
-
-    --main-dark-color: #18214b;
-    --primary-dark-color: #7e8fb4;
-    --secundary-dark-color: #18214b;
-    --text-dark-color: black;
-    --dark-shadow: 0 0 5px 0 var(--main-dark-color);
+    /* LIGHT MODE */
+    --main_color_light_mode: #cdd5f3;
+    --main_bg_light_mode: #EDF1FF;
+    --second_bg_light_mode: #fff;
+    --text_color_light_mode: #000;
+    --shadow_light_mode: 0 0 5px 0 var(--main_color_light_mode);
+    
+    /* DARK MODE */
+    --main_color_dark_mode: #2F2F31;
+    --background_dark_mode: linear-gradient(to top, #2C3036, #7F8489);
+    --shadow_dark_mode: 0 0 5px 0 var(--main_color_dark_mode);
+    --input_bg_dark_mode: #000;
+    --text_color_dark_mode: #fff;
 }
 
 .app {
@@ -31,13 +33,14 @@
 }
 
 .header {
-    box-shadow: var(--dark-shadow);
+    box-shadow: var(--shadow_light_mode);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-light-color);
+    background-color: var(--main_color_light_mode);
     height: 80px;
     gap: 20px;
+    color: var(--text_color_light_mode);
 }
 
 .header :nth-child(1){
@@ -52,8 +55,8 @@
 
 
 .footer {
-    background-color: var(--main-light-color);
-    box-shadow: var(--dark-shadow);
+    background-color: var(--main_color_light_mode);
+    box-shadow: var(--shadow_light_mode);
     display: flex;
     justify-content: center;
     align-items: center;
