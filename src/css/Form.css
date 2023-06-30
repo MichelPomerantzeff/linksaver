@@ -45,8 +45,9 @@ form h2{
     width: 95%;
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
-    font-size: 1.5rem;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .inputRow label{

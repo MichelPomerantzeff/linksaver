@@ -36,7 +36,6 @@ function Form({ productToUpdate  }) {
     }
 
     const onSubmit = async (e) => {
-        e.preventDefault();
         if (id > 0){
             await axios.put(`http://localhost:8080/product/${id}`, product);
         } else {
@@ -68,6 +67,7 @@ function Form({ productToUpdate  }) {
                                 placeholder="Enter product name/descrition" 
                                 name="productName" 
                                 value={productName || ''}
+                                required
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
@@ -80,6 +80,7 @@ function Form({ productToUpdate  }) {
                                 placeholder="Enter store" 
                                 name="shop" 
                                 value={shop || ''}
+                                required
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
@@ -92,6 +93,7 @@ function Form({ productToUpdate  }) {
                                 placeholder="Enter price" 
                                 name="price" 
                                 value={price || ''}
+                                required
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
@@ -104,6 +106,7 @@ function Form({ productToUpdate  }) {
                                 placeholder="Enter link" 
                                 name="link" 
                                 value={link || ''}
+                                required
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
