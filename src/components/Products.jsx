@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react"
 import "../css/Products.css"
 import axios from "axios"
+import { environment } from "../environments/environment.prod"
 
 function Products({ onProductUpdate }) {
 
@@ -17,7 +18,7 @@ function Products({ onProductUpdate }) {
     }, [])
 
     const loadProducts = async () => {
-        const result = await axios.get("http://localhost:8080/products")
+        const result = await axios.get(`${environment.baseUrl}/products`)
         setProductsData(result.data)
     }
     
@@ -38,7 +39,7 @@ function Products({ onProductUpdate }) {
 
     // Delete product from database & update list of products
     const deleteProduct = async (id) => {
-        await axios.delete(`http://localhost:8080/product/${id}`)
+        await axios.delete(`${environment.baseUrl}/product/${id}`)
         loadProducts();
     }
 

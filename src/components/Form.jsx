@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../css/Form.css"
 import axios from "axios";
+import { environment } from "../environments/environment.prod"
 
 function Form({ productToUpdate  }) {
 
@@ -30,16 +31,16 @@ function Form({ productToUpdate  }) {
     }, [productToUpdate])
 
     const loadProductById = async () => {
-        const result = await axios.get(`http://localhost:8080/product/${id}`)
+        const result = await axios.get(`${environment.baseUrl}/product/${id}`)
         setProduct(result.data)
         console.log(result.data)
     }
 
     const onSubmit = async (e) => {
         if (id > 0){
-            await axios.put(`http://localhost:8080/product/${id}`, product);
+            await axios.put(`${environment.baseUrl}/product/${id}`, product);
         } else {
-            await axios.post("http://localhost:8080/product", product);
+            await axios.post(`${environment.baseUrl}/product`, product);
         }
         resetForm();
     };
